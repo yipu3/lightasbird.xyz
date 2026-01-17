@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
             <HomeLink />
             <span className="relative top-[4px] italic">
               by{" "}
-              <Link href="https://github.com/breeze2501" target="_blank">
+              <Link href="https://github.com/yipu3" target="_blank">
                 <Image
                   alt="Yipu Zhang"
                   src="/avatar.jpeg"

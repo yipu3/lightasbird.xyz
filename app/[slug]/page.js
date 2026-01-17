@@ -30,7 +30,7 @@ export default async function PostPage({ params }) {
   const discussUrl = `https://x.com/search?q=${encodeURIComponent(
     `https://lightasbird.xyz/${params.slug}/`,
   )}`;
-  const editUrl = `https://github.com/breeze2501/lightasbird.xyz/edit/main/public/${encodeURIComponent(
+  const editUrl = `https://github.com/yipu3/lightasbird.xyz/edit/main/public/${encodeURIComponent(
     params.slug,
   )}/index.md`;
   return (

@@ -14,7 +14,7 @@ export function generateFeed(posts, metadata) {
     feedLinks: { atom: `${site_url}atom.xml`, rss: `${site_url}rss.xml` },
     generator: "Feed for Node.js",
     id: site_url,
-    image: "https://github.com/breeze2501.png",
+    image: "https://github.com/yipu3.png",
     link: site_url,
     title: metadata.title,
   };
