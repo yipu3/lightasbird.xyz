@@ -10,6 +10,7 @@ import overnight from "overnight/themes/Overnight-Slumber.json";
 import "./markdown.css";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
+import Comments from "../Comments";
 
 overnight.colors["editor.background"] = "var(--code-bg)";
 
@@ -89,6 +90,7 @@ export default async function PostPage({ params }) {
           &nbsp;&nbsp;&middot;&nbsp;&nbsp;
           <Link href={editUrl}>Edit on GitHub</Link>
         </p>
+        <Comments />
       </div>
     </article>
   );
