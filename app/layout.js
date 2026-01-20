@@ -5,6 +5,7 @@ import { serif } from "./fonts";
 import "./global.css";
 import Image from 'next/image';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({ children }) {
   return (
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
           </header>
           <main>{children}</main>
           <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </AutoRefresh>
