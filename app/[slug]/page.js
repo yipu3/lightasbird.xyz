@@ -97,9 +97,11 @@ export default async function PostPage({ params }) {
 }
 
 export async function generateStaticParams() {
+  const { existsSync } = await import("fs");
   const entries = await readdir("./public/", { withFileTypes: true });
   const dirs = entries
     .filter((entry) => entry.isDirectory())
+    .filter((entry) => existsSync(`./public/${entry.name}/index.md`))
     .map((entry) => entry.name);
   return dirs.map((dir) => ({ slug: dir }));
 }

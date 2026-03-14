@@ -16,9 +16,11 @@ export const metadata = {
 };
 
 export async function getPosts() {
+  const { existsSync } = await import("fs");
   const entries = await readdir("./public/", { withFileTypes: true });
   const dirs = entries
     .filter((entry) => entry.isDirectory())
+    .filter((entry) => existsSync(`./public/${entry.name}/index.md`))
     .map((entry) => entry.name);
   const fileContents = await Promise.all(
     dirs.map((dir) => readFile("./public/" + dir + "/index.md", "utf8")),
